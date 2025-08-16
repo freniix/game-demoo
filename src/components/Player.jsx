@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import AskName from "./AskName";
 export default function Player() {
   const [playerName, setPlayerName] = useState("unknown entity");
   const inputRef = useRef(null);
@@ -13,7 +13,7 @@ export default function Player() {
     <section id="player">
       <h2>Welcome {playerName}</h2>
       <p>
-        <input type="text" ref={inputRef}/>
+        <AskName type="text" ref={inputRef}/>
         <button onClick={setName}>Set Name</button>
       </p>
     </section>
